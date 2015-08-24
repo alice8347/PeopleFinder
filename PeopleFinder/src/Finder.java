@@ -80,9 +80,9 @@ public class Finder extends HttpServlet {
 			
 			if (result.next()) {
 				content = "<div class=\"container\"><h3>Results</h3><table class=\"table table-striped\"><thead><tr><th>Title</th><th>First Name</th><th>Last Name</th><th>Street Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Email Address</th><th>Position</th><th>Company</th></tr></thead><tbody>";
-				while (result.next()) {
+				do {
 					content += "<tr><td>" + result.getString("title") + "</td><td>" + result.getString("firstname") + "</td><td>" + result.getString("lastname") + "</td><td>" + result.getString("streetaddress") + "</td><td>" + result.getString("city") + "</td><td>" + result.getString("state") + "</td><td>" + result.getString("zipcode").substring(0, 5) + "</td><td>" + result.getString("emailaddress") + "</td><td>" + result.getString("position") + "</td><td>" + result.getString("company") + "</td></tr>";
-				}
+				} while (result.next());
 				content += "</tbody></table></div>";
 			} else {
 				content = "No matched names.";
