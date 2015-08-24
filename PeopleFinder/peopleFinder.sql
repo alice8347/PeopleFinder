@@ -1,5 +1,5 @@
 CREATE TABLE companies (
-  name VARCHAR(50)
+    name VARCHAR(50)
 );
 
 INSERT INTO companies SELECT DISTINCT company FROM customers;
@@ -19,7 +19,7 @@ UPDATE customers
 SET companyId = (SELECT companyId FROM companies WHERE companies.name = customers.company);
 
 CREATE TABLE cities (
-name VARCHAR(50)
+    name VARCHAR(50)
 );
 
 INSERT INTO cities SELECT DISTINCT city FROM customers;
@@ -33,7 +33,7 @@ ALTER TABLE cities
 ADD PRIMARY KEY (id);
 
 CREATE TABLE states (
-name VARCHAR(10)
+    name VARCHAR(10)
 );
 
 INSERT INTO states SELECT DISTINCT state FROM customers;
