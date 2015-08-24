@@ -73,7 +73,7 @@ public class Finder extends HttpServlet {
 						+ "INNER JOIN cities ON customers.city = cities.id "
 						+ "INNER JOIN states ON customers.state = states.id "
 						+ "INNER JOIN companies ON customers.companyid = companies.companyid) "
-						+ "WHERE \"lastname\" LIKE '" + name + "%'";
+						+ "WHERE \"lastname\" LIKE '" + name + "%' OR \"company\" LIKE '" + name + "%'";
 			
 			PreparedStatement preStatement = conn.prepareStatement(sql);
 			ResultSet result = preStatement.executeQuery();

@@ -17,14 +17,14 @@
 <br />
 <form class="form-horizontal" role="form" action="Finder" method="post">
 <div class="form-group">
-<label class="control-label col-sm-2" for="lastName">Last name:</label>
-<div class="col-sm-10">
+<label class="control-label col-sm-3" for="lastName">Last name / company name:</label>
+<div class="col-sm-9">
 <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Enter last name">
 </div>
 </div>
 
 <div class="form-group"> 
-<div class="col-sm-offset-2 col-sm-10">
+<div class="col-sm-offset-3 col-sm-9">
 <button type="submit" class="btn btn-default">Submit</button>
 </div>
 </div>
